@@ -101,20 +101,36 @@
 // Console.WriteLine(toplam);
 
 
-int a = 10;
-long b = a;
+// int a = 10;
+// long b = a;
 
-long d = 20;
-int e = (int)d;
+// long d = 20;
+// int e = (int)d;
 
-double f = 20.5;
-float g =(float )f;
+// double f = 20.5;
+// float g =(float )f;
 
-double h = 10.5;
-int i = (int)h;
+// double h = 10.5;
+// int i = (int)h;
 
-Console.WriteLine(i);
+// Console.WriteLine(i);
 
-int x = 10;
-string z =x.ToString();
+// int x = 10;
+// string z =x.ToString();
+
+
+
+int? maas = null; //
+
+
+Console.WriteLine(maas.HasValue);
+Console.WriteLine(maas.GetValueOrDefault());
+
+
+
+
+
+
+
+
 
