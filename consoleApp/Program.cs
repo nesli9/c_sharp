@@ -51,37 +51,43 @@
 
 */
 
-var ogrenciAdi = "Ahmet ";
-var ogrenciSoyadi = "Turan";
-var ogrenciAdsoyad = ogrenciAdi + ogrenciSoyadi;
-var ogrenciNumara = "1025";
-var ogrenciCinsiyeti=  true;
-var ogrenciTcKimlikNo= "111111111";
-var ogrenciDogumYili= 2005;
-var ogrenciAdres="istanbul";
-var ogrenciYas = 2024- ogrenciDogumYili;
+// var ogrenciAdi = "Ahmet ";
+// var ogrenciSoyadi = "Turan";
+// var ogrenciAdsoyad = ogrenciAdi + ogrenciSoyadi;
+// var ogrenciNumara = "1025";
+// var ogrenciCinsiyeti=  true;
+// var ogrenciTcKimlikNo= "111111111";
+// var ogrenciDogumYili= 2005;
+// var ogrenciAdres="istanbul";
+// var ogrenciYas = 2024- ogrenciDogumYili;
 
-Console.WriteLine(ogrenciAdi);
-Console.WriteLine(ogrenciSoyadi);
-Console.WriteLine(ogrenciAdsoyad);
-Console.WriteLine(ogrenciNumara);
-Console.WriteLine(ogrenciCinsiyeti);
-Console.WriteLine(ogrenciTcKimlikNo);
-Console.WriteLine(ogrenciDogumYili);
-Console.WriteLine(ogrenciAdres);
-Console.WriteLine(ogrenciYas);
-
-
-
-var urun1_fiyat = 50;
-var urun2_fiyat =  60.5;
-var urun3_fiyat =   356.45;
-
-var toplam = urun1_fiyat + urun2_fiyat + urun3_fiyat ;
-
-Console.WriteLine(toplam);
+// Console.WriteLine(ogrenciAdi);
+// Console.WriteLine(ogrenciSoyadi);
+// Console.WriteLine(ogrenciAdsoyad);
+// Console.WriteLine(ogrenciNumara);
+// Console.WriteLine(ogrenciCinsiyeti);
+// Console.WriteLine(ogrenciTcKimlikNo);
+// Console.WriteLine(ogrenciDogumYili);
+// Console.WriteLine(ogrenciAdres);
+// Console.WriteLine(ogrenciYas);
 
 
+
+// var urun1_fiyat = 50;
+// var urun2_fiyat =  60.5;
+// var urun3_fiyat =   356.45;
+
+// var toplam = urun1_fiyat + urun2_fiyat + urun3_fiyat ;
+
+// Console.WriteLine(toplam);
+
+
+int sayi = 10;
+double kdvOrani = 1.18;
+char cinsiyet = 'K';
+string cinsiyet2 = "Kadın";
+string urunAdi = "samsung s23";
+var satisDurumu = true;
 
 
 
