@@ -197,21 +197,58 @@
 
 //-- DateTime---
 
-var simdi = DateTime.Now;
+// var simdi = DateTime.Now;
 
 
-Console.WriteLine(simdi);
-Console.WriteLine(simdi.Year);
-Console.WriteLine(simdi.Month);
-Console.WriteLine(simdi.Day);
-Console.WriteLine(simdi.DayOfWeek);
+// Console.WriteLine(simdi);
+// Console.WriteLine(simdi.Year);
+// Console.WriteLine(simdi.Month);
+// Console.WriteLine(simdi.Day);
+// Console.WriteLine(simdi.DayOfWeek);
 
-DateTime dt = new DateTime(2018,6,10);
-DateTime dt2 = dt.AddYears(1);
+// DateTime dt = new DateTime(2018,6,10);
+// DateTime dt2 = dt.AddYears(1);
 
-Console.WriteLine(dt);
-Console.WriteLine(dt2);
+// Console.WriteLine(dt);
+// Console.WriteLine(dt2);
 
-var fark = simdi - dt;
+// var fark = simdi - dt;
 
-Console.WriteLine(fark.TotalDays);
+// Console.WriteLine(fark.TotalDays);
+
+
+//----diziler----
+
+var kursAdi = ".NET ile C# Programlama Dili".Split(' ');
+
+// string[] isimler = new string[5];
+
+// isimler[0] = "ahmet";
+// isimler[1] = "mehmet";
+// isimler[2] = "ali";
+// isimler[3] = "veli";
+// isimler[4] = "fatma";
+//isimler[4] = null;//boş değer atanabilir bir veri tipidir.
+
+string[] isimler = {"ahmet","veli","canan","ayşe","fatma"};
+
+
+int[] numaralar = new int[5];
+
+numaralar[0]= 123;
+numaralar[1]=978 ;
+numaralar[2]=  654;
+numaralar[3]=   321;
+numaralar[4]=    987;
+
+
+
+
+
+
+Console.WriteLine($"{isimler[1]}: {numaralar[1]}");
+
+
+
+
+
