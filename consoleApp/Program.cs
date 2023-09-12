@@ -195,11 +195,23 @@
 //Console.WriteLine(sonuc);
 
 
+//-- DateTime---
+
+var simdi = DateTime.Now;
 
 
+Console.WriteLine(simdi);
+Console.WriteLine(simdi.Year);
+Console.WriteLine(simdi.Month);
+Console.WriteLine(simdi.Day);
+Console.WriteLine(simdi.DayOfWeek);
 
+DateTime dt = new DateTime(2018,6,10);
+DateTime dt2 = dt.AddYears(1);
 
+Console.WriteLine(dt);
+Console.WriteLine(dt2);
 
+var fark = simdi - dt;
 
-
-
+Console.WriteLine(fark.TotalDays);
