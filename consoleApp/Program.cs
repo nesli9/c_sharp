@@ -149,7 +149,7 @@
 
 
 
-string mesaj =  "Ahmet TURAN isimli kişi 20 yaşındadır.";
+//string mesaj =  "Ahmet TURAN isimli kişi 20 yaşındadır.";
 
 //var sonuc = mesaj.Length;
 //var sonuc = mesaj.ToLower();
@@ -162,14 +162,37 @@ string mesaj =  "Ahmet TURAN isimli kişi 20 yaşındadır.";
 //var sonuc = mesaj.EndsWith(".");
 //var sonuc = mesaj.Contains("isimli");
 //var sonuc = mesaj.IndexOf("kişi");
-var sonuc = mesaj.Substring(10);
-var sonuc = mesaj.Substring(6,5);
+// var sonuc = mesaj.Substring(10);
+// var sonuc = mesaj.Substring(6,5);
 
-Console.WriteLine(sonuc);
-
-
+// Console.WriteLine(sonuc);
 
 
+
+// --- Uygulama----
+
+//string kursAdi = ".NET ile C# Programlama Dili";
+
+//Kaç karaktere sahip
+//var sonuc = kursAdi.Length;
+
+//hepsini küçük harf yapınız.
+//var sonuc = kursAdi.ToLower();
+
+//'.'ile mi başlamaktadır.
+//var sonuc = kursAdi.StartsWith(".");
+
+//C# bilgisi hangi konumda bulunmaktadır?
+//var sonuc = kursAdi.StartsWith(".");
+
+//C# içeriyor mu?
+//var sonuc = kursAdi.Contains('C#');
+
+//dili kelimesi yerine dersleri yazınız (replace)
+//kursAdi = kursAdi.Replace("Dili","Dersler:");
+
+
+//Console.WriteLine(sonuc);
 
 
 
