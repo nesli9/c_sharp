@@ -248,44 +248,68 @@
 
 //-----dizi metodları----
 
-string[] sehirler = {"istanbul","rize","kocaeli"};
-int[] plakalar = {34,53,41};
+// string[] sehirler = {"istanbul","rize","kocaeli"};
+// int[] plakalar = {34,53,41};
 
 
-// sehirler[0]= "sakarya";
-sehirler.SetValue("sakarya",1);
-
-
-
-Console.WriteLine(sehirler[1]);
-Console.WriteLine(sehirler.GetValue(2));
-Console.WriteLine(sehirler.Length);
-Console.WriteLine(Array.IndexOf(sehirler , "rize"));
-
-
-Array.Sort(sehirler);//sort --> dizidekileri alfabetik sıralar (büyükten küçüğe)
-Array.Sort(plakalar);
+// // sehirler[0]= "sakarya";
+// sehirler.SetValue("sakarya",1);
 
 
 
-Array.Reverse(plakalar);
-Array.Clear(sehirler);
-//Array.Clear(plakalar);
-Array.Clear(plakalar ,0,1);
-
-Console.WriteLine(plakalar.GetValue(0));
-
-// Console.WriteLine(sehirler.GetValue(0));
-// Console.WriteLine(sehirler.GetValue(1));
+// Console.WriteLine(sehirler[1]);
 // Console.WriteLine(sehirler.GetValue(2));
+// Console.WriteLine(sehirler.Length);
+// Console.WriteLine(Array.IndexOf(sehirler , "rize"));
 
 
-Console.WriteLine(plakalar.GetValue(0));
-Console.WriteLine(plakalar.GetValue(1));
-Console.WriteLine(plakalar.GetValue(2));
+// Array.Sort(sehirler);//sort --> dizidekileri alfabetik sıralar (büyükten küçüğe)
+// Array.Sort(plakalar);
 
 
 
+// Array.Reverse(plakalar);
+// Array.Clear(sehirler);
+// //Array.Clear(plakalar);
+// Array.Clear(plakalar ,0,1);
 
+// Console.WriteLine(plakalar.GetValue(0));
+
+// // Console.WriteLine(sehirler.GetValue(0));
+// // Console.WriteLine(sehirler.GetValue(1));
+// // Console.WriteLine(sehirler.GetValue(2));
+
+
+// Console.WriteLine(plakalar.GetValue(0));
+// Console.WriteLine(plakalar.GetValue(1));
+// Console.WriteLine(plakalar.GetValue(2));
+
+
+
+//----- array slicing -----
+
+string[] sehirler = {"zonguldak" , "rize","kocaeli", "istanbul","ankara"};
+
+
+//Console.WriteLine(sonuc.Length);
+
+// foreach (var sehir in sehirler[0..3])
+// {
+//     Console.WriteLine(sehir);
+// }
+
+// foreach (var sehir in sehirler[..3])
+// {
+//     Console.WriteLine(sehir);
+// }
+
+foreach (var sehir in sehirler[2..])
+{
+    Console.WriteLine(sehir);
+}
+
+string il = "kocaeli";
+
+Console.WriteLine(il[(..5)]);
 
 
