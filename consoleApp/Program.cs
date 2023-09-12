@@ -364,21 +364,21 @@
 // Console.WriteLine($"{ogrenciler[2]} isimli öğrencinin not ortalaması : {ortalama_3}");
 
 
-//--- referans tipler ---
+//--- referans tipler
 
 // int x = 10;
 // int y = x;
 
-// int[] x = {10,20};
-// int[] y = x;
+int[] x = {10,20};
+int[] y = x;
 
-// Console.WriteLine(x[0]);
-// Console.WriteLine(y[0]);
+Console.WriteLine(x[0]);
+Console.WriteLine(y[0]);
 
-// x[0]=20;
+x[0]=20;
 
-// Console.WriteLine(x[0]);
-// Console.WriteLine(y[0]);
+Console.WriteLine(x[0]);
+Console.WriteLine(y[0]);
 
 
 
