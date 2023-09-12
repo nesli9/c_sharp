@@ -131,21 +131,49 @@
 // char cinsiyet = 'E';
 // string cinsiyet2 = "Erkek";
 
-Console.Write("adı : ");
-var ad = Console.ReadLine();
+// Console.Write("adı : ");
+// var ad = Console.ReadLine();
 
-Console.Write("soyadı: ");
-var soyad= Console.ReadLine();
+// Console.Write("soyadı: ");
+// var soyad= Console.ReadLine();
 
-Console.Write("yas : ");
-var yas= Console.ReadLine();
+// Console.Write("yas : ");
+// var yas= Console.ReadLine();
 
-//string mesaj = ad + " " + soyad + " isimli kişi" + " " + yas + " yaşındadır.";
+// //string mesaj = ad + " " + soyad + " isimli kişi" + " " + yas + " yaşındadır.";
 
-string mesaj = $"{ad} {soyad} isimli kişi {yas} yaşındadır";
+// string mesaj = $"{ad} {soyad} isimli kişi {yas} yaşındadır";
 
 
-Console.WriteLine(mesaj);
+// Console.WriteLine(mesaj);
+
+
+
+string mesaj =  "Ahmet TURAN isimli kişi 20 yaşındadır.";
+
+//var sonuc = mesaj.Length;
+//var sonuc = mesaj.ToLower();
+//var sonuc = mesaj.ToUpper();
+//var sonuc = mesaj.Trim(); //string kümesinin başındaki ve sonundaki boşluklar silinir.
+//var sonuc = mesaj.Split(" ");
+//var sonuc = mesaj[3];
+//var sonuc = mesaj.Split(" ")[0];
+//var sonuc = mesaj.StartsWith("A");
+//var sonuc = mesaj.EndsWith(".");
+//var sonuc = mesaj.Contains("isimli");
+//var sonuc = mesaj.IndexOf("kişi");
+var sonuc = mesaj.Substring(10);
+var sonuc = mesaj.Substring(6,5);
+
+Console.WriteLine(sonuc);
+
+
+
+
+
+
+
+
 
 
 
