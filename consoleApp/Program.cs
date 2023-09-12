@@ -219,7 +219,7 @@
 
 //----diziler----
 
-var kursAdi = ".NET ile C# Programlama Dili".Split(' ');
+// var kursAdi = ".NET ile C# Programlama Dili".Split(' ');
 
 // string[] isimler = new string[5];
 
@@ -230,23 +230,60 @@ var kursAdi = ".NET ile C# Programlama Dili".Split(' ');
 // isimler[4] = "fatma";
 //isimler[4] = null;//boş değer atanabilir bir veri tipidir.
 
-string[] isimler = {"ahmet","veli","canan","ayşe","fatma"};
+// string[] isimler = {"ahmet","veli","canan","ayşe","fatma"};
 
 
-int[] numaralar = new int[5];
+// int[] numaralar = new int[5];
 
-numaralar[0]= 123;
-numaralar[1]=978 ;
-numaralar[2]=  654;
-numaralar[3]=   321;
-numaralar[4]=    987;
-
-
+// numaralar[0]= 123;
+// numaralar[1]=978 ;
+// numaralar[2]=  654;
+// numaralar[3]=   321;
+// numaralar[4]=    987;
 
 
+// Console.WriteLine($"{isimler[1]}: {numaralar[1]}");
 
 
-Console.WriteLine($"{isimler[1]}: {numaralar[1]}");
+
+//-----dizi metodları----
+
+string[] sehirler = {"istanbul","rize","kocaeli"};
+int[] plakalar = {34,53,41};
+
+
+// sehirler[0]= "sakarya";
+sehirler.SetValue("sakarya",1);
+
+
+
+Console.WriteLine(sehirler[1]);
+Console.WriteLine(sehirler.GetValue(2));
+Console.WriteLine(sehirler.Length);
+Console.WriteLine(Array.IndexOf(sehirler , "rize"));
+
+
+Array.Sort(sehirler);//sort --> dizidekileri alfabetik sıralar (büyükten küçüğe)
+Array.Sort(plakalar);
+
+
+
+Array.Reverse(plakalar);
+Array.Clear(sehirler);
+//Array.Clear(plakalar);
+Array.Clear(plakalar ,0,1);
+
+Console.WriteLine(plakalar.GetValue(0));
+
+// Console.WriteLine(sehirler.GetValue(0));
+// Console.WriteLine(sehirler.GetValue(1));
+// Console.WriteLine(sehirler.GetValue(2));
+
+
+Console.WriteLine(plakalar.GetValue(0));
+Console.WriteLine(plakalar.GetValue(1));
+Console.WriteLine(plakalar.GetValue(2));
+
 
 
 
