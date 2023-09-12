@@ -325,58 +325,40 @@
 
 
 
-var ogrenciler = new string[3];
-var notlar = new int[3];
-
-Console.Write("1. öğrenci adı: " );
-ogrenciler[0] = Console.ReadLine() ??"";
-
-Console.Write("1. öğrenci notu: " );
-notlar[0] = Convert.ToInt32(Console.ReadLine());
-
-Console.Write("2. öğrenci adı: " );
-ogrenciler[1] = Console.ReadLine() ??"";
-
-Console.Write("2. öğrenci notu: " );
-notlar[1] = Convert.ToInt32(Console.ReadLine());
-
-Console.Write("3. öğrenci adı: " );
-ogrenciler[2] = Console.ReadLine() ??"";
-
-Console.Write("3. öğrenci notu: " );
-notlar[2] = Convert.ToInt32(Console.ReadLine());
 
 
-foreach (var ogrenci in ogrenciler)
-{
-    Console.WriteLine(ogrenci);
-}
+// Çok Boyutlu Diziler
 
-foreach (var not in notlar)
-{
-    Console.WriteLine(not);
-}
+// Ali   => 50, 60, 70
+// Ahmet => 60, 80, 90
+// Canan => 50, 70, 30
 
-Console.WriteLine(ogrenciler.Length);
+// Her öğrencinin not ortalamasını hesaplayınız.
 
-
-foreach (var ogrenci in ogrenciler[..2])
-{
-    Console.WriteLine(ogrenci);
-}
-
-foreach (var not in notlar[..2])
-{
-    Console.WriteLine(not);
-}
+string[] ogrenciler = {"ahmet","ali","canan"};
+int[,] notlar = new int[3,3];
 
 
-var not1 = notlar[0];
-var not2 = notlar[1];
-var not3 = notlar[2];
+//ali 
+notlar[0,0] =50;
+notlar[0,1] =60;
+notlar[0,2] =70;
 
-var ortalama = (not1 + not2 + not3)/3;
+//ahmet 
+notlar[1,0] =60;
+notlar[1,1] =80;
+notlar[1,2] =90;
 
-Console.WriteLine(ortalama);
+//canan 
+notlar[2,0] =50;
+notlar[2,1] =70;
+notlar[2,2] =30;
 
 
+var ortalama_1 = (notlar[0,0] + notlar[0,1] + notlar[0,2] ) /3;
+var ortalama_2 = (notlar[1,0] + notlar[1,1] + notlar[1,2] ) /3;
+var ortalama_3 = (notlar[2,0] + notlar[2,1] + notlar[2,2] ) /3;
+
+Console.WriteLine($"{ogrenciler[0]} isimli öğrencinin not ortalaması : {ortalama_1}");
+Console.WriteLine($"{ogrenciler[1]} isimli öğrencinin not ortalaması : {ortalama_2}");
+Console.WriteLine($"{ogrenciler[2]} isimli öğrencinin not ortalaması : {ortalama_3}");
