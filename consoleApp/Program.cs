@@ -120,14 +120,32 @@
 
 
 
-int? maas = null; //
+// int? maas = null; //
+// bool? isActive = null;
+
+// Console.WriteLine(maas.HasValue);
+// Console.WriteLine(maas.GetValueOrDefault());
+// Console.WriteLine(isActive.GetValueOrDefault());
 
 
-Console.WriteLine(maas.HasValue);
-Console.WriteLine(maas.GetValueOrDefault());
+// char cinsiyet = 'E';
+// string cinsiyet2 = "Erkek";
+
+Console.Write("adı : ");
+var ad = Console.ReadLine();
+
+Console.Write("soyadı: ");
+var soyad= Console.ReadLine();
+
+Console.Write("yas : ");
+var yas= Console.ReadLine();
+
+//string mesaj = ad + " " + soyad + " isimli kişi" + " " + yas + " yaşındadır.";
+
+string mesaj = $"{ad} {soyad} isimli kişi {yas} yaşındadır";
 
 
-
+Console.WriteLine(mesaj);
 
 
 
