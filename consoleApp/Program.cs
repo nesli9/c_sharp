@@ -384,31 +384,73 @@
 //-------- operatörler -------
 
 
-var a = 10;
-var b = 5;
-var c = 2;
+// var a = 10;
+// var b = 5;
+// var c = 2;
 
-var sonuc = a+b;
-var sonuc2 = a-b;
-var sonuc3 = a/b;
-var sonuc4 = a*b;
-var sonuc5 = (a+b)*c;
-var sonuc6 = a%b;
-
-
-Console.WriteLine(sonuc);
-Console.WriteLine(sonuc2);
-Console.WriteLine(sonuc3);
-Console.WriteLine(sonuc4);
-Console.WriteLine(sonuc5);
-Console.WriteLine(sonuc6);
+// var sonuc = a+b;
+// var sonuc2 = a-b;
+// var sonuc3 = a/b;
+// var sonuc4 = a*b;
+// var sonuc5 = (a+b)*c;
+// var sonuc6 = a%b;
 
 
+// Console.WriteLine(sonuc);
+// Console.WriteLine(sonuc2);
+// Console.WriteLine(sonuc3);
+// Console.WriteLine(sonuc4);
+// Console.WriteLine(sonuc5);
+// Console.WriteLine(sonuc6);
 
 
 
 
+// Aritmetik Operatör Uygulamaları
 
+// a = 10, b = 5, c = 20 ise c - a farkının b katı kaçtır?
+
+// int? a = 50; int b = 20; ise a + b değerini hesaplayınız. (eğer a null ise sonuç nedir?)
+
+// a=10 b=20 ise a=b--; atamasından sonra a ve b değerleri ne olur?
+
+// Klavyeden girilen bir sayının tek / çift kontrolünü yapınız.
+
+
+// int a = 10 ; 
+// int b = 5;
+// int c = 20;
+
+// var sonuc = (c - a)*b ;
+
+// Console.WriteLine(sonuc);
+
+// int? = 50;
+// int? a = null ; 
+// int b = 20;
+
+// var sonuc = (a ?? 0) + b ; //a null bir değerese 0 değerini at ve işlemi yap.
+
+
+// Console.WriteLine(sonuc);
+
+
+// int a = 10;
+// int b = 20;
+
+// a = b--;
+
+// Console.WriteLine(a);
+// Console.WriteLine(b);
+
+
+Console.Write("sayı : ");
+
+int sayi = int.Parse(Console.ReadLine() ?? "0");
+
+var sonuc = sayi % 2;
+
+Console.WriteLine(sonuc); 
 
 
 
