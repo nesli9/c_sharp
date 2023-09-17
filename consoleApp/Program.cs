@@ -600,19 +600,24 @@
 
 // 5- Uygulamaya giriş kontrolünü username ya da parola için yapalım.
 
-string email = "info@sadikturan.com";
-string username = "sadikturan";
-string password = "12345";
+// string email = "info@sadikturan.com";
+// string username = "sadikturan";
+// string password = "12345";
 
-var sonuc = ((email == "info@sadikturan" || username=="sadikturan2") && (password == "12345")) ? "başarılı":"başarısız";
-Console.WriteLine(sonuc);
-
-
+// var sonuc = ((email == "info@sadikturan" || username=="sadikturan2") && (password == "12345")) ? "başarılı":"başarısız";
+// Console.WriteLine(sonuc);
 
 
+//random 
 
+// var rnd = new Random();
+// int sayi = rnd.Next(50,100);
 
+string[] takimlar = {"beşiktaş","fenerbahçe","galatasaray"};
+var rnd = new Random();
+int sayi = rnd.Next(3);
 
+Console.WriteLine(takimlar[sayi]);
 
 
 
