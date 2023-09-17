@@ -444,13 +444,48 @@
 // Console.WriteLine(b);
 
 
-Console.Write("sayı : ");
+// Console.Write("sayı : ");
 
-int sayi = int.Parse(Console.ReadLine() ?? "0");
+// int sayi = int.Parse(Console.ReadLine() ?? "0");
 
-var sonuc = sayi % 2;
+// var sonuc = sayi % 2;
 
-Console.WriteLine(sonuc); 
+// Console.WriteLine(sonuc); 
+
+
+
+// Atama Operatörleri
+
+var a = 5;
+var b = 10;
+
+a += b; // a = a + b;
+a += 5; // a = a + 5;
+a -= b; // a = a - b;
+a *= b; // a = a * b;
+a /= b; // a = a / b;
+a %= b; // a = a / b;
+
+
+//math
+
+double sonuc ;
+
+sonuc = Math.Pow(2,3);
+sonuc = Math.Sqrt(25);
+sonuc = Math.Abs(-10);
+sonuc = Math.Round(4.5);
+sonuc = Math.Round(4.6); //sayıyı yuvarlar
+sonuc = Math.Round(4.4);
+sonuc = Math.Ceiling(4.4); //her zaman yukarı yuvarlar
+sonuc = Math.Floor(4.6); //her zaman aşağı yuvarlar
+sonuc = Math.Max(10,20);
+sonuc = Math.Min(10,20);
+
+Console.WriteLine(sonuc);
+
+
+
 
 
 
