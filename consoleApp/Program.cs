@@ -489,25 +489,62 @@
 // Karşılaştırma Operatörleri
 
 
-int a = 5, b=5 , c=10,d=3;
-string username = "sadikturan";
-string password = "1234";
+// int a = 5, b=5 , c=10,d=3;
+// string username = "sadikturan";
+// string password = "1234";
 
 
-var sonuc = (a==b);
-sonuc = (c ==d);
-sonuc = (username == "sadikturan");
-sonuc = (password == "12345");
+// var sonuc = (a==b);
+// sonuc = (c ==d);
+// sonuc = (username == "sadikturan");
+// sonuc = (password == "12345");
 
-sonuc = (a!=b);
-sonuc = (a>c);
-sonuc = (a<c);
-sonuc = (a>=b);
+// sonuc = (a!=b);
+// sonuc = (a>c);
+// sonuc = (a<c);
+// sonuc = (a>=b);
 
 // ternary
-var sonuc2 = (a > b) ? "a büyük": (a == b) ? "a b eşit": "b büyük";
+// var sonuc2 = (a > b) ? "a büyük": (a == b) ? "a b eşit": "b büyük"; //iç içe ternary
 
+// Console.WriteLine(sonuc);
+
+
+
+
+// Karşılaştırma Operatör Uygulamaları
+
+// Klavyeden girilen yaş bilgisine göre oy kullanabilme durumunu inceleyiniz.
+
+
+// Console.Write("yaşınız: ");
+// var yas = Convert.ToInt32(Console.ReadLine());
+// var sonuc = (yas >= 18) ? "ehliyet alabilirsiniz" : "ehliyet için yaşınız tutmuyor";
+//Console.WriteLine("ehliyet alabilme durumu : " + sonuc);
+// Console.WriteLine(sonuc);
+
+
+
+// Girilen bir sayının işaretini kontrol ediniz.
+
+// Console.Write("sayı :");
+// var sayi = Convert.ToInt32(Console.ReadLine());
+// var sonuc = (sayi >0) ? "sayı pozitif" : "sayı negatif";
+// Console.WriteLine(sonuc);
+
+
+
+// Girilen bir sayının tek/çift durumunu kontrol ediniz.
+
+Console.Write("sayı: ");
+var sayi = Convert.ToInt32(Console.ReadLine());
+var sonuc = (sayi % 2 == 1) ? "sayı tek": "sayı çift";
 Console.WriteLine(sonuc);
+
+
+
+
+
 
 
 
