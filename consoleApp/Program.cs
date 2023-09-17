@@ -456,35 +456,58 @@
 
 // Atama Operatörleri
 
-var a = 5;
-var b = 10;
+// var a = 5;
+// var b = 10;
 
-a += b; // a = a + b;
-a += 5; // a = a + 5;
-a -= b; // a = a - b;
-a *= b; // a = a * b;
-a /= b; // a = a / b;
-a %= b; // a = a / b;
+// a += b; // a = a + b;
+// a += 5; // a = a + 5;
+// a -= b; // a = a - b;
+// a *= b; // a = a * b;
+// a /= b; // a = a / b;
+// a %= b; // a = a / b;
 
 
 //math
 
-double sonuc ;
+// double sonuc ;
 
-sonuc = Math.Pow(2,3);
-sonuc = Math.Sqrt(25);
-sonuc = Math.Abs(-10);
-sonuc = Math.Round(4.5);
-sonuc = Math.Round(4.6); //sayıyı yuvarlar
-sonuc = Math.Round(4.4);
-sonuc = Math.Ceiling(4.4); //her zaman yukarı yuvarlar
-sonuc = Math.Floor(4.6); //her zaman aşağı yuvarlar
-sonuc = Math.Max(10,20);
-sonuc = Math.Min(10,20);
+// sonuc = Math.Pow(2,3);
+// sonuc = Math.Sqrt(25);
+// sonuc = Math.Abs(-10);
+// sonuc = Math.Round(4.5);
+// sonuc = Math.Round(4.6); //sayıyı yuvarlar
+// sonuc = Math.Round(4.4);
+// sonuc = Math.Ceiling(4.4); //her zaman yukarı yuvarlar
+// sonuc = Math.Floor(4.6); //her zaman aşağı yuvarlar
+// sonuc = Math.Max(10,20);
+// sonuc = Math.Min(10,20);
+
+// Console.WriteLine(sonuc);
+
+
+
+// Karşılaştırma Operatörleri
+
+
+int a = 5, b=5 , c=10,d=3;
+string username = "sadikturan";
+string password = "1234";
+
+
+var sonuc = (a==b);
+sonuc = (c ==d);
+sonuc = (username == "sadikturan");
+sonuc = (password == "12345");
+
+sonuc = (a!=b);
+sonuc = (a>c);
+sonuc = (a<c);
+sonuc = (a>=b);
+
+// ternary
+var sonuc2 = (a > b) ? "a büyük": (a == b) ? "a b eşit": "b büyük";
 
 Console.WriteLine(sonuc);
-
-
 
 
 
