@@ -369,18 +369,39 @@
 // int x = 10;
 // int y = x;
 
-int[] x = {10,20};
-int[] y = x;
+// int[] x = {10,20};
+// int[] y = x;
 
-Console.WriteLine(x[0]);
-Console.WriteLine(y[0]);
+// Console.WriteLine(x[0]);
+// Console.WriteLine(y[0]);
 
-x[0]=20;
+// x[0]=20;
 
-Console.WriteLine(x[0]);
-Console.WriteLine(y[0]);
+// Console.WriteLine(x[0]);
+// Console.WriteLine(y[0]);
 
 
+//-------- operatörler -------
+
+
+var a = 10;
+var b = 5;
+var c = 2;
+
+var sonuc = a+b;
+var sonuc2 = a-b;
+var sonuc3 = a/b;
+var sonuc4 = a*b;
+var sonuc5 = (a+b)*c;
+var sonuc6 = a%b;
+
+
+Console.WriteLine(sonuc);
+Console.WriteLine(sonuc2);
+Console.WriteLine(sonuc3);
+Console.WriteLine(sonuc4);
+Console.WriteLine(sonuc5);
+Console.WriteLine(sonuc6);
 
 
 
