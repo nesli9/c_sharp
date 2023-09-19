@@ -816,35 +816,43 @@
 
 
 
-int ay =12;
+// int ay =12;
 
-switch (ay)
-{
-    case 12:
-    case 1:
-    case 2:
-        Console.WriteLine("Kış");
-        break;
-    case 3:
-    case 4:
-    case 5:
-        Console.WriteLine("İlkbahar");
-        break;
-    case 6:
-    case 7:
-    case 8:
-        Console.WriteLine("yaz");
-        break;
-    case 9:
-    case 10:
-    case 11:
-        Console.WriteLine("sonbahar");
-        break;
+// switch (ay)
+// {
+//     case 12:
+//     case 1:
+//     case 2:
+//         Console.WriteLine("Kış");
+//         break;
+//     case 3:
+//     case 4:
+//     case 5:
+//         Console.WriteLine("İlkbahar");
+//         break;
+//     case 6:
+//     case 7:
+//     case 8:
+//         Console.WriteLine("yaz");
+//         break;
+//     case 9:
+//     case 10:
+//     case 11:
+//         Console.WriteLine("sonbahar");
+//         break;
     
-    default:
-        Console.WriteLine("Hatalı ay bilgisi");
-        break;
-}
+//     default:
+//         Console.WriteLine("Hatalı ay bilgisi");
+//         break;
+// }
+
+int sayi = -9;
+
+var sonuc = (sayi % 2 == 0) ? 
+                (sayi > 0) ? "sayı pozitif çift": "sayı negatif çift": 
+                (sayi > 0) ? "sayı pozitif tek": "sayı negatif tek";
+
+Console.WriteLine(sonuc);
 
 
 
