@@ -921,6 +921,107 @@
 // }
 
 
+//while döngüsü
+
+// for (var i = 0; i < 10; i++){
+//     Console.WriteLine(i);
+// }
+
+// var i=0;
+
+// while (i<10){
+//     Console.WriteLine(i);
+//     i++;
+// }
+
+
+// string[] isimler = {"ali","ahmet","canan"};
+
+// var i = 0;
+
+// while (i < isimler.Length){
+//     Console.WriteLine(isimler[i]);
+//     i++;
+// }
+
+
+// var secim = "e";
+// var sayac = 1;
+// var toplam = 0;
+
+// while (secim == "e"){
+//     Console.Write($"{sayac}. sayı : ");
+//     toplam += Convert.ToInt32(Console.ReadLine());
+
+//     Console.Write("devam etmek istiyor musunuz? (e/h)");
+//     secim = Console.ReadLine();
+
+//     sayac++;
+// }
+
+// Console.WriteLine($"{sayac-1} adet sayının toplamı : {toplam}");
+
+
+//break && continue
+
+// string isim = "sadık turan";
+
+// for (var i = 0; i < isim.Length; i++){
+//     // if (isim[i] == 'ı'){
+//     //     continue;
+//     // }
+//     if (isim[i] == 'ı'){
+//         break;
+//     }
+//     Console.WriteLine(isim[i]);
+// }
+
+
+// int x = 0;
+
+// while(x < 5) {
+//     x++;
+//     if(x == 3) 
+//         continue;
+//     Console.WriteLine(x);
+// }
+
+
+// While Döngüsü Uygulama
+
+// Sayı Tahmin
+// 1-100 arasında rastgele tutulan bir sayıyı buldurmaya çalışın.
+// Tanımlanan hak bittiğinde oyun bitmeli.
+
+var rnd = new Random();
+int tutulan = rnd.Next(1, 100);
+int hak = 3;
+
+while(hak > 0) {
+    Console.WriteLine(tutulan);
+
+    Console.Write("sayı: ");
+    int sayi = Convert.ToInt32(Console.ReadLine());
+
+    hak--;
+
+    if(sayi == tutulan) {
+        Console.WriteLine("tebrikler bildiniz");
+        break;
+    } 
+    else {
+        if(hak == 0) {
+            Console.WriteLine("oyun bitti");
+            break;
+        }
+        if(tutulan > sayi) {
+            Console.WriteLine("yukarı");
+        } else {
+            Console.WriteLine("aşağı");
+        }
+    }
+}
+
 
 
 
