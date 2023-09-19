@@ -623,20 +623,64 @@
 
 // if/else bloğu
 
-string username = "sadikturan";
-string password = "12345";
+// string username = "sadikturan";
+// string password = "12345";
 
 
-if (username == "sadikturan"){
-    if (password == "12345"){
-        Console.WriteLine("merhaba BTK");
-    }else{
-        Console.WriteLine("parola yanlış");
-    }
+// if (username == "sadikturan"){
+//     if (password == "12345"){
+//         Console.WriteLine("merhaba BTK");
+//     }else{
+//         Console.WriteLine("parola yanlış");
+//     }
     
-}else{
-    Console.WriteLine("username yanlış");
+// }else{
+//     Console.WriteLine("username yanlış");
+// }
+
+
+
+//if/else if
+
+
+// string username = "sadikturan";
+// string password = "12345";
+
+
+// if (username != "sadikturan"){
+//         Console.WriteLine("username yanlış");
+// }else if(password !="12345"){
+//     Console.WriteLine("parola yanlış");
+// }else{
+//     Console.WriteLine("merhaba BTK");
+// }
+
+int x = 10;
+int y = 20;
+
+if (x>y){
+    Console.WriteLine("x y den büyük");
+}else if (x == y){
+    Console.WriteLine("x ve y eşit");
+}else
+{
+    Console.WriteLine ("x y den küçük") ;    // else if koşulu sağlanmazsa bu kod çalışır
 }
+
+
+
+
+
+
+
+
+
+// if/else Uygulamaları
+
+// 1- Kullanıcıya sunulan bir menü içinden seçilecek olan 4 işlem tipine göre hesaplama yapınız.
+
+
+
 
 
 
