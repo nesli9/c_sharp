@@ -613,11 +613,32 @@
 // var rnd = new Random();
 // int sayi = rnd.Next(50,100);
 
-string[] takimlar = {"beşiktaş","fenerbahçe","galatasaray"};
-var rnd = new Random();
-int sayi = rnd.Next(3);
+// string[] takimlar = {"beşiktaş","fenerbahçe","galatasaray"};
+// var rnd = new Random();
+// int sayi = rnd.Next(3);
 
-Console.WriteLine(takimlar[sayi]);
+// Console.WriteLine(takimlar[sayi]);
+
+
+
+// if/else bloğu
+
+string username = "sadikturan";
+string password = "12345";
+
+
+if (username == "sadikturan"){
+    if (password == "12345"){
+        Console.WriteLine("merhaba BTK");
+    }else{
+        Console.WriteLine("parola yanlış");
+    }
+    
+}else{
+    Console.WriteLine("username yanlış");
+}
+
+
 
 
 
