@@ -993,38 +993,93 @@
 // 1-100 arasında rastgele tutulan bir sayıyı buldurmaya çalışın.
 // Tanımlanan hak bittiğinde oyun bitmeli.
 
-var rnd = new Random();
-int tutulan = rnd.Next(1, 100);
-int hak = 3;
+// var rnd = new Random();
+// int tutulan = rnd.Next(1, 100);
+// int hak = 3;
 
-while(hak > 0) {
-    Console.WriteLine(tutulan);
+// while(hak > 0) {
+//     Console.WriteLine(tutulan);
 
-    Console.Write("sayı: ");
-    int sayi = Convert.ToInt32(Console.ReadLine());
+//     Console.Write("sayı: ");
+//     int sayi = Convert.ToInt32(Console.ReadLine());
 
-    hak--;
+//     hak--;
 
-    if(sayi == tutulan) {
-        Console.WriteLine("tebrikler bildiniz");
-        break;
-    } 
-    else {
-        if(hak == 0) {
-            Console.WriteLine("oyun bitti");
-            break;
-        }
-        if(tutulan > sayi) {
-            Console.WriteLine("yukarı");
-        } else {
-            Console.WriteLine("aşağı");
-        }
+//     if(sayi == tutulan) {
+//         Console.WriteLine("tebrikler bildiniz");
+//         break;
+//     } 
+//     else {
+//         if(hak == 0) {
+//             Console.WriteLine("oyun bitti");
+//             break;
+//         }
+//         if(tutulan > sayi) {
+//             Console.WriteLine("yukarı");
+//         } else {
+//             Console.WriteLine("aşağı");
+//         }
+//     }
+// }
+
+
+
+//do-while döngüsü
+
+// int i = 1;
+
+// do {
+//     Console.WriteLine(i);
+//     i++;
+// }while (i<10);
+
+// Console.Write("adet : ");
+// int adet = Convert.ToInt32(Console.ReadLine());
+
+// string[] urunler = new string[adet];
+
+// int i = 0;
+
+// do{
+//     Console.Write("ürün adı : ");
+//     urunler[i] = Console.ReadLine() ?? "";
+//     i++;
+// }while(adet != i);
+
+// Console.WriteLine("ürünler listeleniyor ....");
+
+// for (int a = 0; a < urunler.Length; a++){
+//     Console.WriteLine(urunler[a]);
+// }
+
+
+//foreach
+
+// string ad = "ahmet";
+
+// for (int i = 0; i < ad.Length; i++){
+//     Console.WriteLine(ad[i]);
+// }
+
+// foreach (var harf in ad){
+//     Console.WriteLine(harf);
+// }
+
+
+int[] sayilar = {10,20,40,45};
+
+foreach (var sayi in sayilar){
+    if (sayi ==20){
+        continue;
     }
+    Console.WriteLine(sayi);
 }
 
-
-
-
-
+foreach (var sayi in sayilar){
+    if (sayi == 40){
+        break;
+    }
+    Console.WriteLine(sayi);
+}
 
 
