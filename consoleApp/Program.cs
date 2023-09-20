@@ -1066,20 +1066,70 @@
 // }
 
 
-int[] sayilar = {10,20,40,45};
+// int[] sayilar = {10,20,40,45};
 
-foreach (var sayi in sayilar){
-    if (sayi ==20){
-        continue;
+// foreach (var sayi in sayilar){
+//     if (sayi ==20){
+//         continue;
+//     }
+//     Console.WriteLine(sayi);
+// }
+
+// foreach (var sayi in sayilar){
+//     if (sayi == 40){
+//         break;
+//     }
+//     Console.WriteLine(sayi);
+// }
+
+
+
+// dosya okuma
+
+
+// StreamReader sr =  File.OpenText("deneme.txt");
+// var s = "";
+
+// while ((s = sr.ReadLine()) != null){
+//     Console.WriteLine(s);
+// }
+
+
+// string sonuc = File.ReadAllText("deneme.txt");
+// string[] sonuc2 = File.ReadAllLines("deneme.txt");
+
+// Console.WriteLine(sonuc);
+// Console.WriteLine(sonuc2[0]);
+
+
+// using(StreamWriter sw = File.CreateText("deneme.txt")){
+//     sw.WriteLine("MERHABA");
+//     sw.WriteLine("BTK");
+//     sw.WriteLine("AKADEMİ");
+// }
+
+// using(StreamWriter sw = File.AppendText("deneme.txt")){
+//     sw.WriteLine("dersleri");
+//     sw.WriteLine("btk");
+//     sw.WriteLine("c#");
+// }
+
+File.WriteAllText("deneme.txt","merhaba "); //dosya üzerindeki verileri silip üzerine yazar . işi bitince kapatma işini kendi yapr.
+File.AppendAllText("deneme.txt","btk akademi");
+
+
+using(StreamReader sr = File.OpenText("deneme.txt")) {
+    var s = "";
+
+    while((s = sr.ReadLine()) != null) {
+        Console.WriteLine(s);
     }
-    Console.WriteLine(sayi);
 }
 
-foreach (var sayi in sayilar){
-    if (sayi == 40){
-        break;
-    }
-    Console.WriteLine(sayi);
-}
+
+
+
+
+
 
 
