@@ -1321,54 +1321,89 @@
 
 //access modifiers (erişim belirteçleri)
 
+// using System;
+
+// namespace ConsoleApp {
+
+//     class Program {
+
+//         static void Main(string[] args) 
+//         {
+//             var soru1 = new Soru(1, "Hangisi programlama dili değildir?", new string[4] { "Python", "C#", "Java", "Html" }, "Html");
+//             var soru2 = new Soru(2, "Hangisi en popüler programlama dilidir?", new string[4] { "Python", "C#", "Java", "Html" }, "C#");
+//             var soru3 = new Soru(3, "Hangisi web programlama platformu değildir ?", new string[4] { "Django", "Asp.net", "Spring", "Python" }, "Python");
+
+//             Console.WriteLine(soru1.SoruYazdir());
+//             Console.WriteLine(soru1.cevapKontrol("html"));
+
+//             Console.WriteLine(soru2.SoruYazdir());
+//             Console.WriteLine(soru2.cevapKontrol("c#"));
+
+//             Console.WriteLine(soru3.SoruYazdir());
+//             Console.WriteLine(soru3.cevapKontrol("python"));
+//         }
+//     }
+//     class Soru {
+//         //constructor
+//         public Soru(int soruId, string soruMetni, string[] secenekler, string cevap){
+//             this.SoruId = soruId;
+//             this.SoruMetni = soruMetni;
+//             this.Secenekler = secenekler;
+//             this.Cevap = cevap;
+//         }
+//         private int SoruId { get; set; }
+//         private string SoruMetni { get; set; }
+//         private string[] Secenekler { get; set; }
+//         private string Cevap { get; set; }
+        
+//         public string SoruYazdir() {
+//             string soru = "";
+//             soru += this.SoruMetni + "\n";
+//             foreach (var secenek in this.Secenekler){
+//                 soru += secenek + "\n";
+//             }
+
+//             return soru;
+//         }
+//         public bool cevapKontrol(string cevap) {
+//             return this.Cevap.ToLower() == cevap.ToLower();
+//         }
+//     }
+// }
+
+
+
+// static methods
+
 using System;
 
-namespace ConsoleApp {
+namespace ConsoleApp{
+    
+    class Program{
+        static void Main(string[] args){
+            //instance metod (nesne oluşturulup erişilir.nesne üzerinden erişilir.)
+            // Random rnd = new Random();
+            // Console.WriteLine(rnd.Next(1,100));
 
-    class Program {
+            //static metod (doğrudan sınıf üzerinden erişilen metottur.)
+            // Math.Min(10,30);
+            var sonuc = HelperMethods.KarakterDuzelt("ölçme ve değerlendirme");
+            Console.WriteLine(sonuc);
 
-        static void Main(string[] args) 
-        {
-            var soru1 = new Soru(1, "Hangisi programlama dili değildir?", new string[4] { "Python", "C#", "Java", "Html" }, "Html");
-            var soru2 = new Soru(2, "Hangisi en popüler programlama dilidir?", new string[4] { "Python", "C#", "Java", "Html" }, "C#");
-            var soru3 = new Soru(3, "Hangisi web programlama platformu değildir ?", new string[4] { "Django", "Asp.net", "Spring", "Python" }, "Python");
-
-            Console.WriteLine(soru1.SoruYazdir());
-            Console.WriteLine(soru1.cevapKontrol("html"));
-
-            Console.WriteLine(soru2.SoruYazdir());
-            Console.WriteLine(soru2.cevapKontrol("c#"));
-
-            Console.WriteLine(soru3.SoruYazdir());
-            Console.WriteLine(soru3.cevapKontrol("python"));
         }
     }
-    class Soru {
-        //constructor
-        public Soru(int soruId, string soruMetni, string[] secenekler, string cevap){
-            this.SoruId = soruId;
-            this.SoruMetni = soruMetni;
-            this.Secenekler = secenekler;
-            this.Cevap = cevap;
-        }
-        private int SoruId { get; set; }
-        private string SoruMetni { get; set; }
-        private string[] Secenekler { get; set; }
-        private string Cevap { get; set; }
-        
-        public string SoruYazdir() {
-            string soru = "";
-            soru += this.SoruMetni + "\n";
-            foreach (var secenek in this.Secenekler){
-                soru += secenek + "\n";
-            }
-
-            return soru;
-        }
-        public bool cevapKontrol(string cevap) {
-            return this.Cevap.ToLower() == cevap.ToLower();
+    class HelperMethods{
+        public static string KarakterDuzelt(string str){
+            return
+                str.Replace("ö","o")
+                .Replace("ü","u")
+                .Replace("ı","i")
+                .Replace("ğ","g")
+                .Replace("ç","c")
+                .Replace(" ", "-");
         }
     }
+
 }
 
 
