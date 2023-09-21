@@ -1541,53 +1541,90 @@
 
 // dictionary
 
+// using System;
+// using System.Collections.Generic;
+
+
+// namespace ConsoleApp{
+//     class Program{
+//         static void Main(string[] args){
+//             // dictionary
+//             //key - value => plaka - şehir
+
+//             Dictionary<int,string> plakalar = new Dictionary<int,string>();
+
+//             plakalar.Add(41,"kocaeli");
+//             plakalar.Add(34,"istanbul");
+//             plakalar.Add(53,"rize");
+
+//             Dictionary<int,string> sayilar = new Dictionary<int,string>(){
+//                 {1,"bir"},{2,"iki"},{3,"üç"}
+
+//             };
+            
+//             Console.WriteLine(plakalar[41]);
+
+//             if (plakalar.ContainsKey(34)){
+//                 Console.WriteLine(plakalar[34]);
+//             }
+            
+//             foreach (var plaka in plakalar){
+//                 Console.WriteLine(plaka.Key + " " + plaka.Value);
+//             }
+
+//             //update
+//             sayilar[1] = "one";
+//             // sayilar.Remove(1);
+//             // sayilar.Clear();
+
+//             Console.WriteLine(sayilar[1]);
+//         }
+//     }
+// }
+
+
+
+
 using System;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 
 
 namespace ConsoleApp{
     class Program{
         static void Main(string[] args){
-            // dictionary
-            //key - value => plaka - şehir
+            //exception
+            //System.FormatException
+            //System.DevideByZeroException
+            //System.NullReferenceException
 
-            Dictionary<int,string> plakalar = new Dictionary<int,string>();
+            Console.Write("1. sayı: ");
+            int sayi1 = Convert.ToInt32(Console.ReadLine());
 
-            plakalar.Add(41,"kocaeli");
-            plakalar.Add(34,"istanbul");
-            plakalar.Add(53,"rize");
+            Console.Write("2. sayı: ");
+            int sayi2 = Convert.ToInt32(Console.ReadLine());
 
-            Dictionary<int,string> sayilar = new Dictionary<int,string>(){
-                {1,"bir"},{2,"iki"},{3,"üç"}
+            var sonuc = sayi1 / sayi2;
 
-            };
+            Urun urun = null ;
+            Console.WriteLine(urun.UrunAdi);
+
+
+
+            //exception handling
+
             
-            Console.WriteLine(plakalar[41]);
 
-            if (plakalar.ContainsKey(34)){
-                Console.WriteLine(plakalar[34]);
-            }
-            
-            foreach (var plaka in plakalar){
-                Console.WriteLine(plaka.Key + " " + plaka.Value);
-            }
 
-            //update
-            sayilar[1] = "one";
-            // sayilar.Remove(1);
-            // sayilar.Clear();
 
-            Console.WriteLine(sayilar[1]);
 
 
         }
+        class Urun{
+            public int UrunAdi { get; set; }
+        }
     }
 }
-
-
-
-
-
 
 
 
