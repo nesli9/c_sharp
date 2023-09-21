@@ -1144,7 +1144,7 @@
 // Directory.CreateDirectory(path);
 
 
-string rootPath = Directory.GetCurrentDirectory();
+// string rootPath = Directory.GetCurrentDirectory();
 
 // string[] dirs = Directory.GetDirectories(rootPath,"*",SearchOption.TopDirectoryOnly);
 
@@ -1153,31 +1153,72 @@ string rootPath = Directory.GetCurrentDirectory();
 // }
 
 
-string source_path = @"D:\SİSTEM-SAKIN-SİLME\Desktop\Codes\Proje\c_sharp\consoleApp\img";
-string dest_path = @"D:\SİSTEM-SAKIN-SİLME\Desktop\Codes\Proje\c_sharp\consoleApp\images\";
+// string source_path = @"D:\SİSTEM-SAKIN-SİLME\Desktop\Codes\Proje\c_sharp\consoleApp\img";
+// string dest_path = @"D:\SİSTEM-SAKIN-SİLME\Desktop\Codes\Proje\c_sharp\consoleApp\images\";
 
-string[] files = Directory.GetFiles(source_path,"*",SearchOption.AllDirectories);
+// string[] files = Directory.GetFiles(source_path,"*",SearchOption.AllDirectories);
 
-foreach (var file in files){
-    Console.WriteLine(file);
-    Console.WriteLine(Path.GetExtension(file));
-    Console.WriteLine(Path.GetFileNameWithoutExtension(file));
-    Console.WriteLine(Path.GetFileName(file));
+// foreach (var file in files){
+//     Console.WriteLine(file);
+//     Console.WriteLine(Path.GetExtension(file));
+//     Console.WriteLine(Path.GetFileNameWithoutExtension(file));
+//     Console.WriteLine(Path.GetFileName(file));
 
-    var info = new FileInfo(file);
-    Console.WriteLine($"{Path.GetFileName(file)}: {info.Length}");
+//     var info = new FileInfo(file);
+//     Console.WriteLine($"{Path.GetFileName(file)}: {info.Length}");
 
-    if (!Directory.Exists(dest_path)){
-        Directory.CreateDirectory(dest_path);
+//     if (!Directory.Exists(dest_path)){
+//         Directory.CreateDirectory(dest_path);
+//     }
+
+//     string name = Path.GetRandomFileName()+ Path.GetExtension(file);
+//     File.Copy(file, $"{dest_path}{name}");
+
+// }
+
+
+
+//class
+
+namespace ConsolApp{
+    class Program{
+        static void Main(string[] args){
+            Console.WriteLine("Merhaba BTK");
+
+            //class => object (ogr1,ogr2)
+            Ogrenci ogr1=new Ogrenci(){OgrenciNo = "100",AdSoyad = "Ada bilgi",Sube = "6/A"};
+            Ogrenci ogr2=new Ogrenci(){OgrenciNo = "200",AdSoyad = "Yiğit bilgi",Sube = "7/A"};
+            Ogrenci ogr3=new Ogrenci(){OgrenciNo = "300", AdSoyad = "Çınar turan",Sube = "1/A"};
+            Ogrenci ogr4=new Ogrenci(){OgrenciNo = "400", AdSoyad = "Ahmet turan",Sube = "3/A"};
+
+            Ogrenci[] ogrenciler = new Ogrenci[4]{ogr1,ogr2,ogr3,ogr4};
+
+            foreach (var ogrenci in ogrenciler){
+                Console.WriteLine(ogrenci.BilgileriYazdir());
+            }
+
+        }
+    class Ogrenci{
+        //property => string,int
+        public string OgrenciNo { get; set; }
+        public string AdSoyad { get; set; }
+        public string Sube { get; set; }
+
+
+        //methods => bilgileriyazdir()
+        public string BilgileriYazdir(){
+            return $"{this.OgrenciNo} numaralı öğrencinin adı {this.AdSoyad} ve şubesi {this.Sube}";
+        }
     }
-
-    string name = Path.GetRandomFileName()+ Path.GetExtension(file);
-    File.Copy(file, $"{dest_path}{name}");
-
+    }
 }
 
 
 
+
+// ConsoleApp => Program, Ogrenci
+// System => Console
+// System.IO => File, Directory, Path
 
 
 
