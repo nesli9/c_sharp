@@ -1442,53 +1442,108 @@
 
 //array list
 
+// using System;
+// using System.Collections;
 
-using System;
-using System.Collections;
-
-namespace ConsoleApp{
-    class Program{
+// namespace ConsoleApp{
+//     class Program{
         
-        static void Main(string[] args){
-                //arrayList
-                ArrayList liste = new ArrayList();
-                liste.Add(10);
-                liste.Add("10");
-                liste.Add("ali");
-                liste.Add(null);
-                liste.Add(true);
+//         static void Main(string[] args){
+//                 //arrayList
+//                 ArrayList liste = new ArrayList();
+//                 liste.Add(10);
+//                 liste.Add("10");
+//                 liste.Add("ali");
+//                 liste.Add(null);
+//                 liste.Add(true);
 
-                var liste2 = new ArrayList(){
-                    5, "ahmet",false,4.5,null
-                };
+//                 var liste2 = new ArrayList(){
+//                     5, "ahmet",false,4.5,null
+//                 };
 
-                int[] sayilar = {10,20,30};
+//                 int[] sayilar = {10,20,30};
 
-                liste.AddRange(sayilar);
+//                 liste.AddRange(sayilar);
 
-                var eleman = (int)liste[0];
-                var isim = liste[2].ToString();
+//                 var eleman = (int)liste[0];
+//                 var isim = liste[2].ToString();
 
-                //insert (listeye veri ekleme)
-                liste.Insert(1,"sadık");
-                liste.InsertRange(2,liste2);
+//                 //insert (listeye veri ekleme)
+//                 liste.Insert(1,"sadık");
+//                 liste.InsertRange(2,liste2);
 
-                //remove (listeden veri silme)
-                liste.Remove(null);
-                liste.RemoveAt(2);
-                liste.RemoveRange(2,3);
+//                 //remove (listeden veri silme)
+//                 liste.Remove(null);
+//                 liste.RemoveAt(2);
+//                 liste.RemoveRange(2,3);
 
-                //contains - indexof
-                Console.WriteLine(liste.Contains(100));
-                Console.WriteLine(liste.IndexOf(10));
+//                 //contains - indexof
+//                 Console.WriteLine(liste.Contains(100));
+//                 Console.WriteLine(liste.IndexOf(10));
 
                 
-                // foreach (var item in liste){
-                //     Console.WriteLine(item);
-                // }
-        }
+//                 // foreach (var item in liste){
+//                 //     Console.WriteLine(item);
+//                 // }
+//         }
+//     }
+// }
+
+
+
+//GENERİC LİST
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp{
+    
+    class Program{
+        static void Main(string[] args){
+            
+            //generic list
+            List<int> sayilar = new List<int>();
+            sayilar.Add(10);
+            sayilar.Add(20);
+
+            List<string> isimler = new List<string>(){"ali","ahmet","ayşe"};
+
+            List<Product> urunler = new List<Product>();
+
+            urunler.Add(new Product(){ID = 1, Title = "iphone 14",Price = 40000});
+            urunler.Add(new Product(){ID = 2, Title = "iphone 15",Price = 50000});
+            urunler.Add(new Product(){ID = 3, Title = "iphone 16",Price = 60000});
+
+            urunler.Insert(urunler.Count , new Product(){ID = 4, Title = "iphone 17",Price = 70000});
+            urunler.Insert(urunler.Count , new Product(){ID = 5, Title = "iphone 18",Price = 80000});
+
+            // urunler.RemoveAt(4);
+            // urunler.Remove(urunler[0]);
+
+
+            foreach (var urun in urunler){
+                Console.WriteLine(urun.Title + " " + urun.Price);
+            }
+
+        }           
+
     }
+    
+    class Product{
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public double Price { get; set; }
+    }
+
 }
+
+
+
+
+
+
+
+
 
 
 
