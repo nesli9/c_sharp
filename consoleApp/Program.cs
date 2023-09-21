@@ -1585,59 +1585,89 @@
 
 
 
+// using System;
+// using System.Collections.Generic;
+// using System.Net.Http.Headers;
+
+
+// namespace ConsoleApp{
+//     class Program{
+//         static void Main(string[] args){
+//             //exception
+//             //System.FormatException
+//             //System.DevideByZeroException
+//             //System.NullReferenceException
+
+//             try{
+//                 Console.Write("1. sayı: ");
+//                 int sayi1 = Convert.ToInt32(Console.ReadLine());
+
+//                 Console.Write("2. sayı: ");
+//                 int sayi2 = Convert.ToInt32(Console.ReadLine()); //tryParse
+
+//                 var sonuc = sayi1 / sayi2;
+//                 Console.WriteLine(sonuc);
+//             }
+//             catch (FormatException){
+//                 Console.WriteLine("sayısal bilgileri düzgün giriniz");
+                
+//             }
+//             catch (DivideByZeroException){
+//                 Console.WriteLine("sıfır değeri girilmemelidir");
+                
+//             }
+//             catch(Exception ex){
+//                 Console.WriteLine("bir hata oluştu.");
+//                 Console.WriteLine(ex.Message);
+//             }
+//             //exception handling
+//         }
+//     }
+// }
+
+
+
 using System;
 using System.Collections.Generic;
-using System.Net.Http.Headers;
+using System.Linq;
+
 
 
 namespace ConsoleApp{
     class Program{
-        static void Main(string[] args){
-            //exception
-            //System.FormatException
-            //System.DevideByZeroException
-            //System.NullReferenceException
 
-            try{
-                Console.Write("1. sayı: ");
-                int sayi1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("2. sayı: ");
-                int sayi2 = Convert.ToInt32(Console.ReadLine()); //tryParse
-
-                var sonuc = sayi1 / sayi2;
-                Console.WriteLine(sonuc);
+        static void parola_kontrol(string password){
+            if (password.Length < 6 || password.Length > 10){
+                throw new Exception("parola 6-10 karakter aralığında olmalıdır.");
             }
-            // catch (FormatException){
-            //     Console.WriteLine("sayısal bilgileri düzgün giriniz");
-                
-            // }
-            // catch (DivideByZeroException){
-            //     Console.WriteLine("sıfır değeri girilmemelidir");
-                
-            // }
-            catch(Exception ex){
-                Console.WriteLine("bir hata oluştu.");
-                Console.WriteLine(ex.Message);
+            if (!password.Any(char.IsDigit)){
+                throw new Exception("parola en az bir rakam içermelidir.");
             }
-
-
-            //exception handling
-
-
-
-
-
-
+            if (!password.Any(char.IsLetter)){
+                throw new Exception("parola en az bir harf içermelidir.");
+            }
 
 
 
         }
+        static void Main(string[] args){
+            Console.Write("parola :");
+            string parola = Console.ReadLine();
+
+            try
+            {
+                parola_kontrol(parola);
+                Console.WriteLine("parola geçerli");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
+            
+        }
     }
 }
-
-
-
 
 
 
