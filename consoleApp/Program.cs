@@ -1375,36 +1375,70 @@
 
 // static methods
 
+// using System;
+
+// namespace ConsoleApp{
+    
+//     class Program{
+//         static void Main(string[] args){
+//             //instance metod (nesne oluşturulup erişilir.nesne üzerinden erişilir.)
+//             // Random rnd = new Random();
+//             // Console.WriteLine(rnd.Next(1,100));
+
+//             //static metod (doğrudan sınıf üzerinden erişilen metottur.)
+//             // Math.Min(10,30);
+//             var sonuc = HelperMethods.KarakterDuzelt("ölçme ve değerlendirme");
+//             Console.WriteLine(sonuc);
+
+//         }
+//     }
+//     class HelperMethods{
+//         public static string KarakterDuzelt(string str){
+//             return
+//                 str.Replace("ö","o")
+//                 .Replace("ü","u")
+//                 .Replace("ı","i")
+//                 .Replace("ğ","g")
+//                 .Replace("ç","c")
+//                 .Replace(" ", "-");
+//         }
+//     }
+// }
+
+
+
+// collections
+
 using System;
 
 namespace ConsoleApp{
-    
     class Program{
-        static void Main(string[] args){
-            //instance metod (nesne oluşturulup erişilir.nesne üzerinden erişilir.)
-            // Random rnd = new Random();
-            // Console.WriteLine(rnd.Next(1,100));
+        
+        static void Mani(string[] args){
+            // array
+            int [] sayilar=new int[5];
+            sayilar[0]=10;
 
-            //static metod (doğrudan sınıf üzerinden erişilen metottur.)
-            // Math.Min(10,30);
-            var sonuc = HelperMethods.KarakterDuzelt("ölçme ve değerlendirme");
-            Console.WriteLine(sonuc);
 
+            //collectios
+
+            
         }
     }
-    class HelperMethods{
-        public static string KarakterDuzelt(string str){
-            return
-                str.Replace("ö","o")
-                .Replace("ü","u")
-                .Replace("ı","i")
-                .Replace("ğ","g")
-                .Replace("ç","c")
-                .Replace(" ", "-");
-        }
-    }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
