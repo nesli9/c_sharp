@@ -1180,45 +1180,131 @@
 
 //class
 
-namespace ConsolApp{
+// namespace ConsolApp{
+//     class Program{
+//         static void Main(string[] args){
+//             Console.WriteLine("Merhaba BTK");
+
+//             //class => object (ogr1,ogr2)
+//             Ogrenci ogr1=new Ogrenci(){OgrenciNo = "100",AdSoyad = "Ada bilgi",Sube = "6/A"};
+//             Ogrenci ogr2=new Ogrenci(){OgrenciNo = "200",AdSoyad = "Yiğit bilgi",Sube = "7/A"};
+//             Ogrenci ogr3=new Ogrenci(){OgrenciNo = "300", AdSoyad = "Çınar turan",Sube = "1/A"};
+//             Ogrenci ogr4=new Ogrenci(){OgrenciNo = "400", AdSoyad = "Ahmet turan",Sube = "3/A"};
+
+//             Ogrenci[] ogrenciler = new Ogrenci[4]{ogr1,ogr2,ogr3,ogr4};
+
+//             foreach (var ogrenci in ogrenciler){
+//                 Console.WriteLine(ogrenci.BilgileriYazdir());
+//             }
+
+//         }
+//     class Ogrenci{
+//         //property => string,int
+//         public string OgrenciNo { get; set; }
+//         public string AdSoyad { get; set; }
+//         public string Sube { get; set; }
+
+
+//         //methods => bilgileriyazdir()
+//         public string BilgileriYazdir(){
+//             return $"{this.OgrenciNo} numaralı öğrencinin adı {this.AdSoyad} ve şubesi {this.Sube}";
+//         }
+//     }
+//     }
+// }
+
+// ConsoleApp => Program, Ogrenci
+// System => Console
+// System.IO => File, Directory, Path
+
+
+
+
+// class - uygulama
+
+using System;
+
+namespace ConsoleApp{
+
     class Program{
         static void Main(string[] args){
-            Console.WriteLine("Merhaba BTK");
 
-            //class => object (ogr1,ogr2)
-            Ogrenci ogr1=new Ogrenci(){OgrenciNo = "100",AdSoyad = "Ada bilgi",Sube = "6/A"};
-            Ogrenci ogr2=new Ogrenci(){OgrenciNo = "200",AdSoyad = "Yiğit bilgi",Sube = "7/A"};
-            Ogrenci ogr3=new Ogrenci(){OgrenciNo = "300", AdSoyad = "Çınar turan",Sube = "1/A"};
-            Ogrenci ogr4=new Ogrenci(){OgrenciNo = "400", AdSoyad = "Ahmet turan",Sube = "3/A"};
+            var soru1 = new Soru(){
+                SoruMetni = "Hangisi programlama dili değildir?",
+                Secenekler = new string[4]{"python","c#","java","html"},
+                Cevap ="html"
+            };
+            var soru2 = new Soru(){
+                SoruMetni = "Hangisi en popüler programlama dilidir?",
+                Secenekler = new string[4]{"python","c#","java","html"},
+                Cevap ="c#"
+            };
+            var soru3 = new Soru(){
+                SoruMetni = "Hangisi web programlama platformu değildir?",
+                Secenekler = new string[4]{"django","Asp.net","spring","pyhton"},
+                Cevap ="pyhton"
+            };
 
-            Ogrenci[] ogrenciler = new Ogrenci[4]{ogr1,ogr2,ogr3,ogr4};
+            var sorular = new Soru[] {soru1,soru2,soru3};
 
-            foreach (var ogrenci in ogrenciler){
-                Console.WriteLine(ogrenci.BilgileriYazdir());
+            foreach (var soru in sorular){
+                Console.WriteLine(soru.SoruMetni);
+                foreach (var secenek in soru.Secenekler){
+                    Console.WriteLine(secenek);
+                }
+
+                //kullanıcıdan cevap alma
+                Console.Write("cevabınız : ");
+                var cevap = Console.ReadLine();
+
+                if (soru.cevapKontrol(cevap)){
+                    Console.WriteLine("doğru cevap");
+                }else{
+                    Console.WriteLine("yanlış cevap");
+                }
+
+
             }
 
+
         }
-    class Ogrenci{
-        //property => string,int
-        public string OgrenciNo { get; set; }
-        public string AdSoyad { get; set; }
-        public string Sube { get; set; }
+
+    }
+    class Soru{
+        //properties
+        public string  SoruMetni { get; set; }
+        public string[]  Secenekler { get; set; }
+        public string  Cevap { get; set; }
 
 
-        //methods => bilgileriyazdir()
-        public string BilgileriYazdir(){
-            return $"{this.OgrenciNo} numaralı öğrencinin adı {this.AdSoyad} ve şubesi {this.Sube}";
+        //methods
+        public bool cevapKontrol(string cevap){
+            return this.Cevap.ToLower() == cevap.ToLower();
         }
+
+
     }
-    }
+
+
+
+
+
 }
 
 
 
 
-// ConsoleApp => Program, Ogrenci
-// System => Console
-// System.IO => File, Directory, Path
+
+
+
+
+
+
+
+
+
+
+
 
 
 
