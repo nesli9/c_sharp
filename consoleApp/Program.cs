@@ -1493,52 +1493,96 @@
 
 //GENERİC LİST
 
+// using System;
+// using System.Collections.Generic;
+
+// namespace ConsoleApp{
+    
+//     class Program{
+//         static void Main(string[] args){
+            
+//             //generic list
+//             List<int> sayilar = new List<int>();
+//             sayilar.Add(10);
+//             sayilar.Add(20);
+
+//             List<string> isimler = new List<string>(){"ali","ahmet","ayşe"};
+
+//             List<Product> urunler = new List<Product>();
+
+//             urunler.Add(new Product(){ID = 1, Title = "iphone 14",Price = 40000});
+//             urunler.Add(new Product(){ID = 2, Title = "iphone 15",Price = 50000});
+//             urunler.Add(new Product(){ID = 3, Title = "iphone 16",Price = 60000});
+
+//             urunler.Insert(urunler.Count , new Product(){ID = 4, Title = "iphone 17",Price = 70000});
+//             urunler.Insert(urunler.Count , new Product(){ID = 5, Title = "iphone 18",Price = 80000});
+
+//             // urunler.RemoveAt(4);
+//             // urunler.Remove(urunler[0]);
+
+
+//             foreach (var urun in urunler){
+//                 Console.WriteLine(urun.Title + " " + urun.Price);
+//             }
+
+//         }           
+
+//     }
+    
+//     class Product{
+//         public int ID { get; set; }
+//         public string Title { get; set; }
+//         public double Price { get; set; }
+//     }
+
+// }
+
+
+
+// dictionary
+
 using System;
 using System.Collections.Generic;
 
+
 namespace ConsoleApp{
-    
     class Program{
         static void Main(string[] args){
+            // dictionary
+            //key - value => plaka - şehir
+
+            Dictionary<int,string> plakalar = new Dictionary<int,string>();
+
+            plakalar.Add(41,"kocaeli");
+            plakalar.Add(34,"istanbul");
+            plakalar.Add(53,"rize");
+
+            Dictionary<int,string> sayilar = new Dictionary<int,string>(){
+                {1,"bir"},{2,"iki"},{3,"üç"}
+
+            };
             
-            //generic list
-            List<int> sayilar = new List<int>();
-            sayilar.Add(10);
-            sayilar.Add(20);
+            Console.WriteLine(plakalar[41]);
 
-            List<string> isimler = new List<string>(){"ali","ahmet","ayşe"};
-
-            List<Product> urunler = new List<Product>();
-
-            urunler.Add(new Product(){ID = 1, Title = "iphone 14",Price = 40000});
-            urunler.Add(new Product(){ID = 2, Title = "iphone 15",Price = 50000});
-            urunler.Add(new Product(){ID = 3, Title = "iphone 16",Price = 60000});
-
-            urunler.Insert(urunler.Count , new Product(){ID = 4, Title = "iphone 17",Price = 70000});
-            urunler.Insert(urunler.Count , new Product(){ID = 5, Title = "iphone 18",Price = 80000});
-
-            // urunler.RemoveAt(4);
-            // urunler.Remove(urunler[0]);
-
-
-            foreach (var urun in urunler){
-                Console.WriteLine(urun.Title + " " + urun.Price);
+            if (plakalar.ContainsKey(34)){
+                Console.WriteLine(plakalar[34]);
+            }
+            
+            foreach (var plaka in plakalar){
+                Console.WriteLine(plaka.Key + " " + plaka.Value);
             }
 
-        }           
+            //update
+            sayilar[1] = "one";
+            // sayilar.Remove(1);
+            // sayilar.Clear();
 
-    }
-    
-    class Product{
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public double Price { get; set; }
-    }
+            Console.WriteLine(sayilar[1]);
 
+
+        }
+    }
 }
-
-
-
 
 
 
